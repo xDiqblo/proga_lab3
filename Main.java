@@ -8,35 +8,35 @@ public class Main {
         Equip equip1 = new Equip("AK-47", "P7", "6B11-M");
 
         Soldier soldier1 = new Soldier("Музыкант", 1, equip1);
-        ArrayList<Soldier> soldiers_list = new ArrayList<>();
-        soldiers_list.add(soldier1);
+        ArrayList<Soldier> soldiersList = new ArrayList<>();
+        soldiersList.add(soldier1);
 
-        Troop troop1 = new Troop(1, "Пехота", 1, soldiers_list);
-        ArrayList<Troop> troops_list = new ArrayList<>();
-        troops_list.add(troop1);
+        Troop troop1 = new Troop(1, "Пехота", 1, soldiersList);
+        ArrayList<Troop> troopsList = new ArrayList<>();
+        troopsList.add(troop1);
 
-        Company company1 = new Company(1, "Пехота", 1, troops_list);
-        ArrayList<Company> companies_list = new ArrayList<>();
-        companies_list.add(company1);
+        Company company1 = new Company(1, "Пехота", 1, troopsList);
+        ArrayList<Company> companiesList = new ArrayList<>();
+        companiesList.add(company1);
 
-        Battalion battalion1 = new Battalion(1, "Пехота", 1, companies_list);
+        Battalion battalion1 = new Battalion(1, "Пехота", 1, companiesList);
 
         System.out.println("---------------Constructor Test------------------");
         battalion1.printBattalion();
 
         // Тестирование методов класса Equip
         System.out.println("---------------Equip Test------------------");
-        equip1.createEquipKit();  // Метод отсутствует в исходном описании класса
+        equip1.createEquipKit();
         equip1.printEquipKit();
 
         // Тестирование методов класса Soldier
         System.out.println("---------------Soldier Test------------------");
-        soldier1.createSoldier(); // Метод отсутствует в исходном описании класса
+        soldier1.createSoldier();
         soldier1.printSoldier();
 
         // Тестирование методов класса Troop
         System.out.println("---------------Troop Test------------------");
-        troop1.createTroop();     // Метод отсутствует в исходном описании класса
+        troop1.createTroop();
         System.out.println("Информация о взводе после создания");
         troop1.printTroop();
 
@@ -46,7 +46,7 @@ public class Main {
         troop1.printTroop();
 
         System.out.println("Список солдат для тестирования метода удаления солдата:");
-        troop1.deleteSoldier();  // Предполагается, что deleteSoldier принимает индекс удаляемого солдата
+        troop1.deleteSoldier();
         System.out.println("Информация о взводе после удаления солдата:");
         troop1.printTroop();
 
@@ -61,7 +61,7 @@ public class Main {
         company1.printCompany();
 
         System.out.println("Список взводов для тестирования метода удаления взвода");
-        company1.deleteTroop();  // Предполагается, что deleteTroop принимает индекс удаляемого взвода
+        company1.deleteTroop();
         System.out.println("Информация о роте после удаления взвода:");
         company1.printCompany();
 
